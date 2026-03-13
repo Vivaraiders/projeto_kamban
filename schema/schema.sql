@@ -1,0 +1,19 @@
+CREATE TABLE IF NOT EXISTS tarefas(
+    id SMALLINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    titulo VARCHAR(50) NOT NULL,
+    descricao TEXT,
+    status VARCHAR(10) NOT NULL,
+    prioridade VARCHAR(25) NOT NULL,
+    data_criacao DATETIME DEFAULT CURRENT_TIMESTAMP,
+    data_conclusao DATETIME,
+    user_id INT,
+    CONSTRAINT fk_user FOREIGN KEY (user_id) REFERENCES usuarios(id) ON DELETE CASCADE
+);
+
+ CREATE TABLE users(
+    id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(15) NOT NULL,
+    ultimo_nome VARCHAR(15) NOT NULL,
+    email VARCHAR(100) NOT NULL UNIQUE,
+    senha VARCHAR(255) NOT NULL 
+);
