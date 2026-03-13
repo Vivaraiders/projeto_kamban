@@ -20,7 +20,7 @@ Projeto de gerenciamento de tarefas no terminal usando Python e MySQL.
 
 1. Clone o repositório
 
-git clone https://github.com/seuusuario/kanban-python
+git clone https://github.com/Vivaraiders/projeto_kamban/
 
 2. Instale a dependência
 
